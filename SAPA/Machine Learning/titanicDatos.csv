@@ -1,0 +1,6 @@
+pclass,name,sex,age,sibsp,parch,embarked,fare
+3,John,male,22,1,0,S,21171.0
+1,Jane,female,38,1,0,C,17599.7
+2,Alice,female,26,0,1,S,8.05
+3,Bob,male,35,0,0,S,8.46
+1,Charlie,male,30,2,0,C,51.86
