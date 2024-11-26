@@ -32,24 +32,8 @@ def encode_sex(X):
     return X
 
 def categorize_age(X):
-    bins = [-1, 16, 32, 48, 64, 100]
-    labels = [1, 2, 3, 4, 5]
-
-    categorized_age = np.zeros(X.shape[0], dtype=int)
-
-    for i in range(X.shape[0]):
-        age = X[i, 0] 
-        if age <= bins[1]:
-            categorized_age[i] = labels[0]
-        elif age <= bins[2]:
-            categorized_age[i] = labels[1]  
-        elif age <= bins[3]:
-            categorized_age[i] = labels[2]
-        elif age <= bins[4]:
-            categorized_age[i] = labels[3]
-        else:
-            categorized_age[i] = labels[4]    
-    return categorized_age.reshape(-1, 1)
+    pd.cut(X[:,0], bins = [-1, 16, 32, 48, 64, np.inf] ,labels = [1, 2, 3, 4, 5])
+    return X
 
 #    [...] Todas las funciones definidas por nosotros
 titanic = pd.read_csv("/home/iabd/Escritorio/IA/SAPA//titanicDatos.csv")

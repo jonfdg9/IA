@@ -50,8 +50,8 @@ def get_user_input():
 def main():
     """Función principal para cargar el modelo y predecir."""
     try:
-        # Solicitar el nombre del archivo del modelo
-        archivo = input("Introduce el nombre del archivo del modelo (con extensión .pkl): ")
+        # Nombre del archivo
+        archivo = "fully_paid.pkl"
         
         # Cargar el modelo
         final_model_reloaded = joblib.load("/home/iabd/Escritorio/IA/SAPA/Machine Learning/"+archivo)
